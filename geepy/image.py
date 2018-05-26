@@ -534,6 +534,8 @@ def randomSamples(feature, img, numPoints, seed, classBand, classValues, classPo
         dropNulls = True, 
         scale = scale
     )
+    
+    points = points.randomColumn('randCol', 0)
 
     return points.map(setGeometry)
 
