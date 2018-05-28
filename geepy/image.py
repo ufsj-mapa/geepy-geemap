@@ -570,7 +570,11 @@ def randomForest(img, training, bands, ntrees = 10, classBand = 'CLASS', scale =
             classBand:
             scale: Resolution in meters per pixel.
     """
-    trained = ee.Classifier.randomForest(ntrees).train(training, classBand, bands)
-    classification = img.select(bands).classify(trained)
+
+    classifier = ee.Classifier.randomForest(ntrees).train(training, classBand, bands)
+    classification = img.select(bands).classify(classifier)
     
-    return classification.toByte()
+    accuracy = classifier.confusionMatrix()
+    
+    return classification.toByte(), accuracy
+
