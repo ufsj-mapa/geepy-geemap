@@ -589,9 +589,11 @@ def accuracyAssessment(confusionMatrix):
     return ee.FeatureCollection([
         ee.Feature(None, {
             'error matrix': confusionMatrix.array(),
+            'matrix order': confusionMatrix.order(),
             'overall accuracy': confusionMatrix.accuracy(),
             'accuracy kappa': confusionMatrix.kappa(),
-            'producer  accuracy': confusionMatrix.producersAccuracy(),
-            'consumer  accuracy':  confusionMatrix.consumersAccuracy()
+            'producer accuracy': confusionMatrix.producersAccuracy(),
+            'consumer accuracy': confusionMatrix.consumersAccuracy()
         })
     ])
+
