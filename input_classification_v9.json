@@ -35,14 +35,14 @@
 		}
 	},
 	"samples":{
-			"1990": "users/fernandompimenta/amostragem/amostragem1990AIBAfe",
+			"1990": "users/fernandompimenta/amostragem/amostras_1990",
 			"2016": "users/fernandompimenta/amostragem/amostragemTotal_EL_AIBA2016_teste5"
 	},
 	"lsTiles": "users/fernandompimenta/AIBA/landsatAIBA",
 	"studyArea":"users/fernandompimenta/AIBA/watershedsStatesGCC",
 	"towns":"users/fernandompimenta/AIBA/townsAIBA",
 	"rivers":"users/fernandompimenta/AIBA/riversAIBA",    
-	"bandParams":[ "ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "dtown", "brightness", "greenness", "wetness", "thermal", "ndvi", "evi", "savi", "mndwi", "wmask", "fci", "ndvithermal"],
+	"bandParams":[ "ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "dtown", "driver", "brightness", "greenness", "wetness", "thermal", "ndvi", "evi", "savi", "mndwi", "wmask", "fci", "ndvithermal"],
 	"srtm": "USGS/SRTMGL1_003",
 	"period": {
 		"dry": {

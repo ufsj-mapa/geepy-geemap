@@ -611,6 +611,87 @@ def cart(img, training, bands, classBand = 'CLASS'):
     return classification.toByte(), accuracy
 
 
+def minimumDistance(img, training, bands, classBand = 'CLASS', metric = 'euclidean'):
+    """
+        minimunDistance help
+        
+        Args:
+            img:
+            training:
+            bands:
+            classBand:
+            metric: The distance metric to use.
+                    'euclidean' - euclidean distance from the unnormalized class mean.
+                    'cosine' - spectral angle from the unnormalized class mean.
+                    'mahalanobis' - Mahalanobis distance from the class mean.
+    """
+    classifier = ee.Classifier.minimumDistance(metric).train(training, classBand, bands)
+    classification = img.select(bands).classify(classifier)
+    
+    accuracy = classifier.confusionMatrix()
+    
+    return classification.toByte(), accuracy
+
+
+def SVM(img, training, bands, classBand = 'CLASS', kernelType = 'LINEAR'):
+    """
+        Creates a Support Vector Machine classifier.
+        
+        Args:
+            img:
+            training:
+            bands:
+            classBand:
+            kernelType: The kernel type. One of LINEAR (u′×v), POLY ((γ×u′×v + coef₀)ᵈᵉᵍʳᵉᵉ), RBF (exp(-γ×|u-v|²)) or SIGMOID (tanh(γ×u′×v + coef₀)).
+    """
+    classifier = ee.Classifier.svm(kernelType = kernelType).train(training, classBand, bands)
+    classification = img.select(bands).classify(classifier)
+    
+    accuracy = classifier.confusionMatrix()
+    
+    return classification.toByte(), accuracy
+
+
+def wekaKMeans(img, training, bands, nClusters = 10):
+    """
+        wekaKMeans help
+        
+        Args:
+            img:
+            training:
+            bands:
+            nClusters:
+    """
+    classifier = ee.Clusterer.wekaKMeans(nClusters).train(training, bands)
+    classification = img.select(bands).cluster(classifier)
+    
+    #accuracy = classifier.confusionMatrix()
+    
+    return classification.toByte() #, accuracy
+
+def wekaCascadeKMeans(img, training, bands, minClusters = 2, maxClusters = 5):
+    """
+        Cascade simple k-means, selects the best k according to calinski-harabasz criterion.
+
+        For more information see:
+            Calinski, T. and J. Harabasz. 1974. A dendrite method for cluster analysis. Commun. Stat. 3: 1-27.
+        
+        Args:
+            img:
+            training:
+            bands:
+            classBand:
+            minClusters:
+            maxClusters:
+    """
+    classifier = ee.Clusterer.wekaCascadeKMeans(minClusters, maxClusters).train(training, bands)
+    classification = img.select(bands).cluster(classifier)
+    
+    #accuracy = classifier.confusionMatrix()
+    
+    return classification.toByte() #, accuracy
+
+
 def accuracyAssessment(confusionMatrix):
     """
         accuracyAssesment help
