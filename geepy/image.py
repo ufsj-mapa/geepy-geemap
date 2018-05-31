@@ -29,7 +29,7 @@ def getInfo(obj):
         pass
 
 
-def edgeRemoval(img, bufferSize = -9000):
+def edgeRemoval(img, bufferSize = -6000):
     """
     Removes the edges of an img.
 
@@ -40,6 +40,21 @@ def edgeRemoval(img, bufferSize = -9000):
     bbox = img.geometry()
     
     return img.clip(bbox.buffer(bufferSize).simplify(1))
+
+
+def cloudFree(img):
+    """
+    cloudFree help
+        
+    Args:
+        img:
+    """
+    cloudMask = img.select('cfmask').eq(5)
+    shadeMask = img.select('cfmask').eq(3)
+    
+    csm = cloudMask.add(shadeMask).gte(1)
+
+    return img.mask(csm.neq(1))
 
 
 def clipImageFromFusionTable(img, tile):
