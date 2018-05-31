@@ -574,19 +574,36 @@ def trainingSamples(img, samples, classBand = 'CLASS', scale = 30):
     return training
 
 
-def randomForest(img, training, bands, ntrees = 10, classBand = 'CLASS', scale = 10):
+def randomForest(img, training, bands, ntrees = 10, classBand = 'CLASS'):
     """
         randomForest help
         
         Args:
             img:
             training:
+            bands:
             ntrees:
             classBand:
-            scale: Resolution in meters per pixel.
     """
-
     classifier = ee.Classifier.randomForest(ntrees).train(training, classBand, bands)
+    classification = img.select(bands).classify(classifier)
+    
+    accuracy = classifier.confusionMatrix()
+    
+    return classification.toByte(), accuracy
+
+
+def cart(img, training, bands, classBand = 'CLASS'):
+    """
+        cart help
+        
+        Args:
+            img:
+            training:
+            bands:
+            classBand:
+    """
+    classifier = ee.Classifier.cart().train(training, classBand, bands)
     classification = img.select(bands).classify(classifier)
     
     accuracy = classifier.confusionMatrix()
