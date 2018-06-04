@@ -50,7 +50,13 @@ class geeMap:
         Show map in jupyter-notebook.
         """
         return self.map
-    
+   
+    def showWindow(self):
+        """
+        Show map in a separate window.
+        """
+        return self.map._repr_html_() 
+        
     def addControls(self):
         """
         Add controls to map.
