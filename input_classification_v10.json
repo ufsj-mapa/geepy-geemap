@@ -51,11 +51,11 @@
 			"end": "-12-30"
 		},
 		"rainy": {
-			"start": "-04-01",
-			"end": "-05-30"
+			"start": "-11-01",
+			"end": "-04-30"
 		}
 	},
-	"cloudCoverThreshold": 20,
+	"cloudCoverThreshold": 80,
 	"radist":1000000,
 	"VIIRS": {
 		"1990": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20120401",
