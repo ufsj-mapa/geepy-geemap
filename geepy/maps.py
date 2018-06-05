@@ -23,7 +23,7 @@ class geeMap:
         self.zoom = zoom
 
         # Open Street Map Base    
-        self.map = folium.Map(height=800, location=self.centroid, tiles="OpenStreetMap", zoom_start=self.zoom, control_scale=True)
+        self.map = folium.Map(location=self.centroid, tiles="OpenStreetMap", zoom_start=self.zoom, control_scale=True)
         
     def addLayer(self, img, viz_params=None, name=''):
         """

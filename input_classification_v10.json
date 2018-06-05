@@ -43,7 +43,7 @@
 	"studyArea":"users/fernandompimenta/AIBA/watershedsStatesGCC",
 	"towns":"users/fernandompimenta/AIBA/townsAIBA",
 	"rivers":"users/fernandompimenta/AIBA/riversAIBA",    
-	"bandParams":[ "ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "dtown", "driver", "brightness", "greenness", "wetness", "thermal", "ndvi", "evi", "savi", "mndwi", "wmask", "fci", "ndvithermal"],
+	"bandParams":[ "ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "dtown", "driver", "brightness", "greenness", "wetness", "thermal", "ndfi", "ndvi", "evi", "savi", "mndwi", "wmask", "fci", "ndvithermal"],
 	"srtm": "USGS/SRTMGL1_003",
 	"period": {
 		"dry": {
