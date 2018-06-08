@@ -12,22 +12,6 @@ from socket import error as SocketError
 
 ee.Initialize()
 
-def getInfo(obj):
-    """
-    getInfo docstring
-    
-    Args:
-        obj: 
-    """
-    try:
-        return [obj[0], obj[1].divide(obj[2]).getInfo()]
-    except SocketError as e:
-        if e.errno != errno.ECONNRESET:
-            raise
-
-        print(e.errno)
-        pass
-
 
 def edgeRemoval(img, bufferSize = -6000):
     """
@@ -42,31 +26,22 @@ def edgeRemoval(img, bufferSize = -6000):
     return img.clip(bbox.buffer(bufferSize).simplify(1))
 
 
-def cloudFree(img):
+def maskLandsatSR(img):
     """
-    cloudFree help
-        
+    maskLandsatSR
     Args:
         img:
     """
-    cloudMask = img.select('cfmask').eq(5)
-    shadeMask = img.select('cfmask').eq(3)
+    cloudShadowBitMask = ee.Number(2).pow(3).int()
+    cloudsBitMask = ee.Number(2).pow(5).int()
     
-    csm = cloudMask.add(shadeMask).gte(1)
-
-    return img.mask(csm.neq(1))
-
-
-def clipImageFromFusionTable(img, tile):
-    """
-    clipImageFromFusionTable docstring
+    qa = img.select('qa')
     
-    Args:
-        img: Image to crop.
-        tile: Region to crop img.
-    """
-    return img.clip(tile.geometry())
+    mask = qa.bitwiseAnd(cloudShadowBitMask).eq(0).And(qa.bitwiseAnd(cloudsBitMask).eq(0))
+    
+    img = img.addBands(mask.rename(['cloudmask'])) 
 
+    return img.updateMask(mask).divide(10000).copyProperties(img, ["system:time_start"])
 
 def imgMask(img, pixValue):
     """
@@ -78,18 +53,6 @@ def imgMask(img, pixValue):
     """
     mask = img.eq(pixValue)
     return mask
-
-
-def waterMask(img, bandName = 'wmask'):
-    """
-    Get the wmask band from an img with MNDWI band.
-
-    Args:
-        img: Image containing the MNDWI band.
-    """
-    wmask = img.select(['mndwi']).gt(0)
-    
-    return (img.addBands(wmask.rename([bandName])))
 
 
 def send2drive(img, coords, desc, driveFolder, scale = 30):
