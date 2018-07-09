@@ -191,7 +191,6 @@ def tassCapTransformation(img, satellite):
     
     return img.addBands(tassCap)
 
-
 def calcBCI(img, geometry, bandName = 'bci'):
     """ 
     Calculates the Biophysical Composition Index (BCI).
@@ -207,6 +206,7 @@ def calcBCI(img, geometry, bandName = 'bci'):
         scale = 30,
         maxPixels = 1e13
     )
+    b = b.getInfo()['brightness_min'], b.getInfo()['brightness_max']
 
     g = img.select('greenness').reduceRegion(
         reducer = ee.Reducer.minMax(),
@@ -214,34 +214,36 @@ def calcBCI(img, geometry, bandName = 'bci'):
         scale = 30,
         maxPixels = 1e13
     )
-
+    g = g.getInfo()['greenness_min'], g.getInfo()['greenness_max']
+    
     w = img.select('wetness').reduceRegion(
         reducer = ee.Reducer.minMax(),
         geometry = geometry,
         scale = 30,
         maxPixels = 1e13
     )
-
+    w = w.getInfo()['wetness_min'], w.getInfo()['wetness_max']
+    
     H = img.expression('(brightness - min)/(max - min)',{
         'brightness': img.select('brightness'),
-        'min': b.getInfo()['brightness_min'],
-        'max': b.getInfo()['brightness_max']
+        'min': b[0],
+        'max': b[1]
     }).rename('H')
-
+    
     V = img.expression('(greenness - min)/(max - min)',{
         'greenness': img.select('greenness'),
-        'min': g.getInfo()['greenness_min'],
-        'max': g.getInfo()['greenness_max']
+        'min': g[0],
+        'max': g[1]
     }) .rename('V')
 
     L = img.expression('(wetness - min)/(max - min)',{
         'wetness': img.select('wetness'),
-        'min': w.getInfo()['wetness_min'],
-        'max': w.getInfo()['wetness_max']
+        'min': w[0],
+        'max': w[1]
     }).rename('L')
 
     HVL = ee.Image(H).addBands(V).addBands(L)
-    
+
     BCI = HVL.expression('(0.5 * (H + L) - V)/(0.5* (H + L) + V)', {
         'H': HVL.select('H'),
         'V': HVL.select('V'),
