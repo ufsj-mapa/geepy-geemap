@@ -39,15 +39,20 @@
 			"1991": "users/fernandompimenta/amostragem/amostragem1990AIBAfe",
 			"2016": "users/fernandompimenta/amostragem/amostras2016",
 			"20162": "users/fernandompimenta/amostragem/amostras2016_teste6",
-			"2016v8": "users/fernandompimenta/amostragem/amostras2016v8"
+			"2016v8": "users/fernandompimenta/amostragem/amostras2016v8",
+			"2016v9": "users/fernandompimenta/amostragem/amostras2016v9",
+			"2016v10": "users/fernandompimenta/amostragem/amostras2016v10",
+			"2016v11": "users/fernandompimenta/amostragem/amostras2016v11"
 	},
 	"lsTiles": "users/fernandompimenta/AIBA/landsatAIBA",
 	"studyArea":"users/fernandompimenta/AIBA/watershedsStatesGCC",
 	"towns":"users/fernandompimenta/AIBA/townsAIBA",
 	"rivers":"users/fernandompimenta/AIBA/riversAIBA",
+	"hidroBDGEx":"users/fernandompimenta/AIBA/hidrografiaBDGEx",
 	"pivots":"users/fernandompimenta/AIBA/centralPivots/pc",
-	"bandParams":["ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio","ndvi", "evi", "savi", "mndwi"],
+	"bandParams":["ntl", "ndbi", "alos", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio","ndvi", "evi", "savi", "mndwi","wmask"],
 	"srtm": "USGS/SRTMGL1_003",
+	"alos": "JAXA/ALOS/AW3D30_V1_1",
 	"period": {
 		"dry": {
 			"start": "-01-01",

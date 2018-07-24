@@ -7,7 +7,10 @@
 			"218067", "218068", "218069", "218070", "218071"
 		],
 		"tiles2process": [
-			"T220068"
+			"T221067", "T221068", "T221069", "T221070", "T221071",
+			"T220067", "T220068", "T220069", "T220070", "T220071",
+			"T219067", "T219068", "T219069", "T219070", "T219071",
+			"T218067", "T218068", "T218069", "T218070", "T218071"
 		]
 	},
 	"years2process": [
@@ -39,15 +42,18 @@
 			"1991": "users/fernandompimenta/amostragem/amostragem1990AIBAfe",
 			"2016": "users/fernandompimenta/amostragem/amostras2016",
 			"20162": "users/fernandompimenta/amostragem/amostras2016_teste6",
-			"2016v8": "users/fernandompimenta/amostragem/amostras2016v8"
+			"2016v8": "users/fernandompimenta/amostragem/amostras2016v8",
+			"fractions": "users/fernandompimenta/amostragem/fractions"        
 	},
 	"lsTiles": "users/fernandompimenta/AIBA/landsatAIBA",
 	"studyArea":"users/fernandompimenta/AIBA/watershedsStatesGCC",
 	"towns":"users/fernandompimenta/AIBA/townsAIBA",
 	"rivers":"users/fernandompimenta/AIBA/riversAIBA",
+	"hidroBDGEx":"users/fernandompimenta/AIBA/hidrografiaBDGEx",
 	"pivots":"users/fernandompimenta/AIBA/centralPivots/pc",
-	"bandParams":["ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio","ndvi", "evi", "savi", "mndwi"],
+	"bandParams":["ntl", "alos", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio", "f1", "f2", "f3","wmask"],
 	"srtm": "USGS/SRTMGL1_003",
+	"alos": "JAXA/ALOS/AW3D30_V1_1",
 	"period": {
 		"dry": {
 			"start": "-01-01",

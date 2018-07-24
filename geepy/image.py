@@ -191,6 +191,18 @@ def tassCapTransformation(img, satellite):
     
     return img.addBands(tassCap)
 
+
+def calcRatio(img, bandName= 'ratio'):
+    """
+    calcRatio help
+    """
+    return (img.addBands(
+        img.expression('float(nir)/red', {
+            'nir':img.select('nir'),
+            'red':img.select('red')
+        }).rename([bandName])))
+
+
 def calcBCI(img, geometry, bandName = 'bci'):
     """ 
     Calculates the Biophysical Composition Index (BCI).
@@ -342,6 +354,7 @@ def calcNDFI(img, bandName = 'ndfi'):
     Args:
         img: The input image.
         bandNames: The output band name.
+    
     """
     gvs = img.select("gvs")
     

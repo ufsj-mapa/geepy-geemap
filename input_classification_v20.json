@@ -45,9 +45,11 @@
 	"studyArea":"users/fernandompimenta/AIBA/watershedsStatesGCC",
 	"towns":"users/fernandompimenta/AIBA/townsAIBA",
 	"rivers":"users/fernandompimenta/AIBA/riversAIBA",
+	"hidroBDGEx":"users/fernandompimenta/AIBA/hidrografiaBDGEx",
 	"pivots":"users/fernandompimenta/AIBA/centralPivots/pc",
-	"bandParams":["ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio","ndvi", "evi", "savi", "mndwi"],
+	"bandParams":["ntl", "ndbi", "alos", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio","ndvi", "evi", "savi", "mndwi","wmask"],
 	"srtm": "USGS/SRTMGL1_003",
+	"alos": "JAXA/ALOS/AW3D30_V1_1",
 	"period": {
 		"dry": {
 			"start": "-01-01",
