@@ -567,7 +567,7 @@ def randomForest(img, training, bands, ntrees = 10, classBand = 'CLASS'):
     classification = img.select(bands).classify(classifier)
     
     accuracy = classifier.confusionMatrix()
-    
+     
     return classification.toByte(), accuracy
 
 
