@@ -35,16 +35,16 @@
 		}
 	},
 	"samples":{
-			"1990": "users/fernandompimenta/amostragem/amostras1990",
-			"1991": "users/fernandompimenta/amostragem/amostragem1990AIBAfe",
-			"2016": "users/fernandompimenta/amostragem/amostras2016",
-			"20162": "users/fernandompimenta/amostragem/amostras2016_teste6",
-			"2016v8": "users/fernandompimenta/amostragem/amostras2016v8",
-			"2016v9": "users/fernandompimenta/amostragem/amostras2016v9",
-			"2016v10": "users/fernandompimenta/amostragem/amostras2016v10",
-			"2016v11": "users/fernandompimenta/amostragem/amostras2016v11",
-			"2016v12": "users/fernandompimenta/amostragem/amostras2016v12",
-			"2016v13": "users/fernandompimenta/amostragem/amostras2016v13"
+		"1990": "users/fernandompimenta/amostragem/amostras1990",
+		"1991": "users/fernandompimenta/amostragem/amostragem1990AIBAfe",
+		"2016": "users/fernandompimenta/amostragem/amostras2016",
+		"20162": "users/fernandompimenta/amostragem/amostras2016_teste6",
+		"2016v8": "users/fernandompimenta/amostragem/amostras2016v8",
+		"2016v9": "users/fernandompimenta/amostragem/amostras2016v9",
+		"2016v10": "users/fernandompimenta/amostragem/amostras2016v10",
+		"2016v11": "users/fernandompimenta/amostragem/amostras2016v11",
+		"2016v12": "users/fernandompimenta/amostragem/amostras2016v12",
+		"2016v13": "users/fernandompimenta/amostragem/amostras2016v13"
 	},
 	"lsTiles": "users/fernandompimenta/AIBA/landsatAIBA",
 	"studyArea":"users/fernandompimenta/AIBA/watershedsStatesGCC",
@@ -67,7 +67,7 @@
 		}
 	},
 	"cloudCoverThreshold": 80,
-	"radist":1000000,
+	"radist": 1000000,
 	"VIIRS": {
 		"1990": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20120401",
 		"1991": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20120401",

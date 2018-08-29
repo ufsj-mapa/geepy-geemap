@@ -41,7 +41,7 @@
 	"towns":"users/fernandompimenta/AIBA/townsAIBA",
 	"farms":"users/fernandompimenta/AIBA/farmsAIBA",
 	"hamlets":"users/fernandompimenta/AIBA/hamletsAIBA",
-    "rivers":"users/fernandompimenta/AIBA/riversAIBA",    
+    "rivers":"users/fernandompimenta/AIBA/riversAIBA",
 	"bandParams":[ "ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "dvillage", "dfarm", "dtown", "dhamlet", "driver", "blue", "green", "red", "nir", "swir1", "swir2", "thermal", "ndvi", "evi", "savi", "ndwi", "mndwi", "wmask", "gv", "npv", "soil", "cloud", "gvs", "shade", "ndfi2", "ndfi3", "fci", "gvnpv", "npvsoil", "ndvithermal"],
 	"srtm": "USGS/SRTMGL1_003",
 	"period": {
