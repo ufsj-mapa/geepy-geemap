@@ -199,20 +199,20 @@ mapa.addLayer(landsat[ano], viz_params={'min':0.15,'max':0.4,'bands':'swir1,nir,
 mapa.addControls()
 mapa.show()
 
-# Region extent
-coords = [[[-46.632916356914535, -15.447083782725066],   [-43.13041651144095, -15.447083782725066],   [-43.13041651144095, -10.181249376641395],   [-46.632916356914535, -10.181249376641395],   [-46.632916356914535, -15.447083782725066]]]
-
-# Save to Google Drive
-tasks = {year: geepy.image.send2drive(finalClassification[year], coords, 'classification'+year+'v30', 'classification_v30', 30) for year in config.params['years2process']}
-for i in tasks.keys():
-   [tasks[i].start()]
-
-# Accuracy assessment data
-accuracy = {year: geepy.image.accuracyAssessment(classification[year][1]) for year in config.params['years2process']}
-accTasks = {year: geepy.feature.send2drive(accuracy[year], 'accuracyAssessment' + year, 'accuracyAssessment_v30', 'accuracyAssessment'+year+'_v30', 'GeoJSON') for year in config.params['years2process']}
-for i in accTasks.keys():
-    [accTasks[i].start()]
-
+## Region extent
+#coords = [[[-46.632916356914535, -15.447083782725066],   [-43.13041651144095, -15.447083782725066],   [-43.13041651144095, -10.181249376641395],   [-46.632916356914535, -10.181249376641395],   [-46.632916356914535, -15.447083782725066]]]
+#
+## Save to Google Drive
+#tasks = {year: geepy.image.send2drive(finalClassification[year], coords, 'classification'+year+'v30', 'classification_v30', 30) for year in config.params['years2process']}
+#for i in tasks.keys():
+#   [tasks[i].start()]
+#
+## Accuracy assessment data
+#accuracy = {year: geepy.image.accuracyAssessment(classification[year][1]) for year in config.params['years2process']}
+#accTasks = {year: geepy.feature.send2drive(accuracy[year], 'accuracyAssessment' + year, 'accuracyAssessment_v30', 'accuracyAssessment'+year+'_v30', 'GeoJSON') for year in config.params['years2process']}
+#for i in accTasks.keys():
+#    [accTasks[i].start()]
+#
 # To asset
 # task = {year: geepy.image.send2asset(finalClassification[year],
 #                                      coords,

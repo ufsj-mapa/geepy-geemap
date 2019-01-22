@@ -286,9 +286,9 @@ def calcEVI(img, bandName = 'evi'):
         }).rename([bandName])))
 
 
-def calcNDWI(img, bandName = 'ndwi'):
+def calcNDWI_L(img, bandName = 'ndwil'):
     """
-    Calculates the Normalized Difference Water Index (NDWI).
+    Calculates the Normalized Difference Water Index (NDWI) in leaves.
 
     Args:
         img: THe input image.
@@ -301,9 +301,9 @@ def calcNDWI(img, bandName = 'ndwi'):
         }).rename([bandName])))
 
 
-def calcMNDWI(img, bandName = 'mndwi'):
+def calcNDWI_WB(img, bandName = 'mndwiwb'):
     """
-    Calculates the Modified Normalized Difference Water Index (MNDWI).
+    Calculates the Modified Normalized Difference Water Index (MNDWI) in water bodies.
 
     Args:
         img: The input image.
