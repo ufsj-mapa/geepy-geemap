@@ -56,7 +56,7 @@
 	"hidroBDGEx":"users/fernandompimenta/AIBA/hidrografiaBDGEx",
 	"pivots":"users/fernandompimenta/AIBA/centralPivots/pc",
 	"roads":"users/fernandompimenta/AIBA/roadsAIBA",
-	"bandParams":["ntl", "ndbi", "alos", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio", "evi", "mndwi","wmask"],
+	"bandParams":["ntl", "ndbi", "alos", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio", "evi", "ndwiwb","wmask"],
 	"srtm": "USGS/SRTMGL1_003",
 	"alos": "JAXA/ALOS/AW3D30_V1_1",
 	"period": {
