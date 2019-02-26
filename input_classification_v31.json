@@ -22,17 +22,20 @@
 	],
 	"imgCollection": {
 		"lc5": {
-			"id": "LANDSAT/LT05/C01/T1_SR",
+			"sr": "LANDSAT/LT05/C01/T1_SR",
+			"toa": "LANDSAT/LT05/C01/T1_TOA",
 			"bands": ["B1", "B2", "B3", "B4", "B5", "B7", "B6", "pixel_qa"],
 			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
 		},
 		"lc7": {
-			"id": "LANDSAT/LE07/C01/T1_SR",
+			"sr": "LANDSAT/LE07/C01/T1_SR",
+			"toa": "LANDSAT/LE07/C01/T1_TOA",
 			"bands": ["B1", "B2", "B3", "B4", "B5", "B7", "B6", "pixel_qa"],
 			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
 		},
 		"lc8": {
-			"id": "LANDSAT/LC08/C01/T1_SR",
+			"sr": "LANDSAT/LC08/C01/T1_SR",
+			"toa": "LANDSAT/LC08/C01/T1_TOA",
 			"bands": ["B2", "B3", "B4", "B5", "B6", "B7", "B10", "pixel_qa"],
 			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
 		}
@@ -49,6 +52,7 @@
 		"2016v12": "users/fernandompimenta/amostragem/amostras2016v12",
 		"2016v13": "users/fernandompimenta/amostragem/amostras2016v13"
 	},
+	"extent":[[[-46.632916356914535, -15.447083782725066],[-43.13041651144095, -15.447083782725066],[-43.13041651144095, -10.181249376641395], [-46.632916356914535, -10.181249376641395], [-46.632916356914535, -15.447083782725066]]],
 	"lsTiles": "users/fernandompimenta/AIBA/landsatAIBA",
 	"studyArea":"users/fernandompimenta/AIBA/watershedsStatesGCC",
 	"towns":"users/fernandompimenta/AIBA/townsAIBA",
@@ -59,7 +63,7 @@
 	"bands": ["blue", "green", "red", "nir", "swir1", "swir2"],
 	"minNames": ["blue_min", "green_min", "red_min", "nir_min", "swir1_min", "swir2_min"],
 	"maxNames": ["blue_max", "green_max", "red_max", "nir_max", "swir1_max", "swir2_max"],
-	"bandParams":["ntl", "ndbi", "alos", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio", "evi", "ndwiwb","wmask"],
+	"bandParams":["ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio", "evi", "ndwiwb","wmask"],
 	"srtm": "USGS/SRTMGL1_003",
 	"alos": "JAXA/ALOS/AW3D30_V1_1",
 	"period": {

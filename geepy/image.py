@@ -301,7 +301,7 @@ def calcNDWI_L(img, bandName = 'ndwil'):
         }).rename([bandName])))
 
 
-def calcNDWI_WB(img, bandName = 'mndwiwb'):
+def calcNDWI_WB(img, bandName = 'ndwiwb'):
     """
     Calculates the Modified Normalized Difference Water Index (MNDWI) in water bodies.
 
