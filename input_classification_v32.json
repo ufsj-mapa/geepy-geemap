@@ -7,7 +7,7 @@
 			"218067", "218068", "218069", "218070", "218071"
 		],
 		"tiles2process": [
-			"T220068"
+			"T220069"
 		]
 	},
 	"years2process": [
@@ -15,43 +15,58 @@
 		"1996", "1997", "1998", "1999", "2000", "2001",
 		"2002", "2003", "2004", "2005", "2006", "2007",
 		"2008", "2009", "2010", "2011", "2012", "2013",
-		"2014", "2015", "2016"
+		"2014", "2015", "2016", "2017", "2018"
 	],
 	"imgCollection": {
 		"lc5": {
-			"id": "LANDSAT/LT05/C01/T1_SR",
+			"sr": "LANDSAT/LT05/C01/T1_SR",
+			"toa": "LANDSAT/LT05/C01/T1_TOA",
 			"bands": ["B1", "B2", "B3", "B4", "B5", "B7", "B6", "pixel_qa"],
 			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
 		},
 		"lc7": {
-			"id": "LANDSAT/LE07/C01/T1_SR",
+			"sr": "LANDSAT/LE07/C01/T1_SR",
+			"toa": "LANDSAT/LE07/C01/T1_TOA",
 			"bands": ["B1", "B2", "B3", "B4", "B5", "B7", "B6", "pixel_qa"],
 			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
 		},
 		"lc8": {
-			"id": "LANDSAT/LC08/C01/T1_SR",
+			"sr": "LANDSAT/LC08/C01/T1_SR",
+			"toa": "LANDSAT/LC08/C01/T1_TOA",
 			"bands": ["B2", "B3", "B4", "B5", "B6", "B7", "B10", "pixel_qa"],
 			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
 		}
 	},
 	"samples":{
-			"1990": "users/fernandompimenta/amostragem/amostras1990",
-			"1991": "users/fernandompimenta/amostragem/amostragem1990AIBAfe",
-			"2016": "users/fernandompimenta/amostragem/amostras2016",
-			"20162": "users/fernandompimenta/amostragem/amostras2016_teste6",
-			"2016v8": "users/fernandompimenta/amostragem/amostras2016v8"
+		"1990": "users/fernandompimenta/amostragem/amostras1990",
+		"1991": "users/fernandompimenta/amostragem/amostragem1990AIBAfe",
+		"2016": "users/fernandompimenta/amostragem/amostras2016",
+		"20162": "users/fernandompimenta/amostragem/amostras2016_teste6",
+		"2016v8": "users/fernandompimenta/amostragem/amostras2016v8",
+		"2016v9": "users/fernandompimenta/amostragem/amostras2016v9",
+		"2016v10": "users/fernandompimenta/amostragem/amostras2016v10",
+		"2016v11": "users/fernandompimenta/amostragem/amostras2016v11",
+		"2016v12": "users/fernandompimenta/amostragem/amostras2016v12",
+		"2016v13": "users/fernandompimenta/amostragem/amostras2016v13"
 	},
+	"extent":[[[-46.632916356914535, -15.447083782725066],[-43.13041651144095, -15.447083782725066],[-43.13041651144095, -10.181249376641395], [-46.632916356914535, -10.181249376641395], [-46.632916356914535, -15.447083782725066]]],
 	"lsTiles": "users/fernandompimenta/AIBA/landsatAIBA",
 	"studyArea":"users/fernandompimenta/AIBA/watershedsStatesGCC",
 	"towns":"users/fernandompimenta/AIBA/townsAIBA",
 	"rivers":"users/fernandompimenta/AIBA/riversAIBA",
+	"hidroBDGEx":"users/fernandompimenta/AIBA/hidrografiaBDGEx",
 	"pivots":"users/fernandompimenta/AIBA/centralPivots/pc",
-	"bandParams":["ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness", "ratio","ndvi", "evi", "savi", "mndwi"],
+	"roads":"users/fernandompimenta/AIBA/roadsAIBA",
+	"bands": ["blue", "green", "red", "nir", "swir1", "swir2"],
+	"minNames": ["blue_min", "green_min", "red_min", "nir_min", "swir1_min", "swir2_min"],
+	"maxNames": ["blue_max", "green_max", "red_max", "nir_max", "swir1_max", "swir2_max"],
+	"bandParams":["ntl", "ndbi", "srtm", "slope", "aspect", "hillshade", "driver", "brightness", "greenness", "wetness","min_blue", "min_green",  "min_red",  "min_nir",  "min_swir1",  "min_swir2",  "max_blue",  "max_green",  "max_red",  "max_nir",  "max_swir1",  "max_swir2", "ratio", "evi", "ndwiwb","wmask"],
 	"srtm": "USGS/SRTMGL1_003",
+	"alos": "JAXA/ALOS/AW3D30_V1_1",
 	"period": {
 		"dry": {
-			"start": "-01-01",
-			"end": "-12-31"
+			"start": "-04-01",
+			"end": "-09-01"
 		},
 		"rainy": {
 			"start": "-11-01",
@@ -59,7 +74,7 @@
 		}
 	},
 	"cloudCoverThreshold": 80,
-	"radist":1000000,
+	"radist": 1000000,
 	"VIIRS": {
 		"1990": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20120401",
 		"1991": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20120401",
@@ -87,6 +102,11 @@
 		"2013": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20131201",
 		"2014": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20141201",
 		"2015": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20151201",
-		"2016": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20161201"
-	}
+		"2016": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20161201",
+		"2017": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20171201",
+		"2018": "NOAA/VIIRS/DNB/MONTHLY_V1/VCMCFG/20180501"
+	},
+	"vizParams": {
+		"classification":{"min": 1, "max": 12, "palette": "#004000, #77a605, #004000, #b8af4f, #f6e6db, #ffcaff, #ff42f9, #f4f286, #0000ff, #ff0000, #77a605, #77a605"}
+    }
 }
