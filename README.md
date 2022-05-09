@@ -13,11 +13,7 @@
 ### Made using:
 [![made-with-python](https://img.shields.io/badge/python%203-blue.svg)](https://www.python.org/)
 [![made-with-gee](https://img.shields.io/badge/Google%20Earth%20Engine-blue.svg)](https://earthengine.google.com/)
-[![made-with-wxpython](https://img.shields.io/badge/wxpython4-blue.svg)](https://wxpython.org/)
-[![made-with-follium](https://img.shields.io/badge/follium-blue.svg)](https://python-visualization.github.io/folium/)
-
-*wxpython and follium are used to show layers in the jupyter notebooks if necessary.
-
+[![made-with-geemap](https://img.shields.io/badge/geemap-blue.svg)](https://geemap.org/)
 
 <hr>
 
