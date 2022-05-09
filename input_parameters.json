@@ -1,0 +1,78 @@
+{
+	"grid": {
+		"tiles": [
+			"T221076", "T221077", "T221078", "T221079", "T224076", "T224077", "T224078", "T222076", "T222077", "T222078", "T220077", "T220078", "T223076", "T223077", "T223078"
+		],
+		"tiles2process": [
+			"T222076"
+		]
+	},
+	"years2process": [
+		"2020"
+	],
+	"imgCollection": {
+		"lc5": {
+			"sr": "LANDSAT/LT05/C01/T1_SR",
+			"toa": "LANDSAT/LT05/C01/T1_TOA",
+			"bands": ["B1", "B2", "B3", "B4", "B5", "B7", "B6", "pixel_qa"],
+			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
+		},
+		"lc7": {
+			"sr": "LANDSAT/LE07/C01/T1_SR",
+			"toa": "LANDSAT/LE07/C01/T1_TOA",
+			"bands": ["B1", "B2", "B3", "B4", "B5", "B7", "B6", "pixel_qa"],
+			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
+		},
+		"lc8": {
+			"sr": "LANDSAT/LC08/C01/T1_SR",
+			"toa": "LANDSAT/LC08/C01/T1_TOA",
+			"bands": ["B2", "B3", "B4", "B5", "B6", "B7", "B10", "pixel_qa"],
+			"bandNames": ["blue", "green", "red", "nir", "swir1", "swir2", "thermal", "qa"]
+		}
+	},
+	"extent":[[[-54.6202133259999698,-26.7171220059999470], [-54.6202133259999698, -22.5162951639999420], [-48.0235374349999589,-22.5162951639999420], [-48.0235374349999589, -26.7171220059999470],[-54.6202133259999698,-26.7171220059999470]]],
+	"samples":{
+		"amostras_parana": "users/fpufsj/MAPA/amostras_parana"
+	},
+	"lsTiles": "users/fpufsj/MAPA/landsat_tiles",
+	"studyArea":"users/fpufsj/MAPA/parana",
+	"bandParams":["psri", "ndbi", "ndvi", "evi", "savi", "ndwil", "ndwiwb", "ratio", "srtm", "slope", "aspect", "hillshade", "brightness", "greenness", "wetness"],
+	"srtm": "USGS/SRTMGL1_003",
+	"alos": "JAXA/ALOS/AW3D30_V1_1",
+	"plantingDate": {
+		"soybean": {
+			"planting": {
+				"start": "-08-01",
+				"end": "-12-31"
+			},
+			"harvest": {
+				"start": "-01-01",
+				"end": "-05-01"
+			}
+		},
+		"wheat": {
+			"planting": {
+				"start": "-04-01",
+				"end": "-08-01"
+			},
+			"harvest": {
+				"start": "-08-01",
+				"end": "-12-31"
+			}
+		},
+		"corn2crop": {
+			"planting": {
+				"start": "-01-01",
+				"end": "-05-01"
+			},
+			"harvest": {
+				"start": "-05-01",
+				"end": "-09-30"
+			}
+		}
+	},
+	"cloudCoverThreshold": 80,
+	"visParams": {
+		"classification":{"min": 1, "max": 4, "palette": "#77a605, #b8af4f, #ffff8d, #888888"}
+    }
+}
