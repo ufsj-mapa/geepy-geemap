@@ -202,6 +202,16 @@ def calcRatio(img, bandName= 'ratio'):
             'red':img.select('red')
         }).rename([bandName])))
 
+def calcPSRI(img, bandName= 'psri'):
+    """
+    calcPSRI help
+    """
+    return (img.addBands(
+        img.expression('float(red - green)/nir', {
+            'red':img.select('red'),
+            'green':img.select('green'),
+            'nir':img.select('nir')          
+        }).rename([bandName])))
 
 def calcBCI(img, geometry, bandName = 'bci'):
     """ 
@@ -563,7 +573,7 @@ def randomForest(img, training, bands, ntrees = 10, classBand = 'CLASS'):
             ntrees:
             classBand:
     """
-    classifier = ee.Classifier.randomForest(ntrees).train(training, classBand, bands)
+    classifier = ee.Classifier.smileRandomForest(ntrees).train(training, classBand, bands)
     classification = img.select(bands).classify(classifier)
     
     accuracy = classifier.confusionMatrix()
