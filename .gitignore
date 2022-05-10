@@ -24,3 +24,6 @@ coverage.xml
 
 # Translations
 *.mo
+
+# Images
+*.png

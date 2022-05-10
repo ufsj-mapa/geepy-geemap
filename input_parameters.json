@@ -32,7 +32,7 @@
 	},
 	"extent":[[[-54.6202133259999698,-26.7171220059999470], [-54.6202133259999698, -22.5162951639999420], [-48.0235374349999589,-22.5162951639999420], [-48.0235374349999589, -26.7171220059999470],[-54.6202133259999698,-26.7171220059999470]]],
 	"samples":{
-		"amostras_parana": "users/fpufsj/MAPA/amostras_parana"
+		"crop_samples": "users/fpufsj/MAPA/crop_samples_parana"
 	},
 	"lsTiles": "users/fpufsj/MAPA/landsat_tiles",
 	"studyArea":"users/fpufsj/MAPA/parana",
